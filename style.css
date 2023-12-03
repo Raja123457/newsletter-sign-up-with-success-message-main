@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+:root {
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%)
+}
+@font-face {
+    font-family: MyFont;
+    src: url(./assets/fonts/Roboto-Bold.ttf);
+    font-family: new;
+    src: url(/assets/fonts/Roboto-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: var(--Charcoal-Grey);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--White);
+    position: absolute;
+    padding: 1em 1em 1em 1em;
+    border-radius: 1em;
+    height: 75vh;
+    width: 115vh;
+}
+
+.card-left {
+    width: 50vw;
+    margin: 0em 2.5em;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: MyFont;
+
+}
+
+h1 {
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 2.5em;
+    line-height: 1em;
+    margin: .5em 0;
+    color: var(--Dark-Slate-Grey);
+}
+
+p {
+    font-size: 12px;
+    font-family: roboto;
+    font-weight: 100;
+    color: var(--Grey);
+
+}
+
+li {
+    list-style: none;
+    gap: 1em;
+    margin: 1em 0;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-family: roboto;
+    font-weight: 100;
+    color: var(--Grey);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}label{
+    position: relative;
+    top:8%
+}
+#valid{
+    color: red;
+    position: relative;
+    display: block;
+    left: 60%;
+    opacity: 0;
+}
+
+input {
+    height: 2.6em;
+    margin: .1em 0em .5em 0em;
+    padding: 0 1em;
+    border-radius: 5px;
+    font-size: 1em;
+    border: 1px solid var(--Grey);
+    cursor: pointer;
+}
+
+button {
+    height: 2.8em;
+    margin: .5em 0;
+    cursor: pointer;
+    color: var(--White);
+    background-color: var(--Dark-Slate-Grey);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+
+}
+
+button:hover {
+    background-image: linear-gradient(0.25turn,rgb(231, 38, 103) , orange);
+}
+
+
+ .card-right img {
+    height: 70vh;
+    border-radius: .5em;
+    position: relative;
+}
+
+section {
+    pointer-events: none;
+
+    opacity: 0;
+    position: relative;
+    background-color: var(--White);
+    width: 60vh;
+    height: 60vh;
+    display: flex;
+    padding: 2em;
+    border-radius: 1.5em;
+    justify-content: center;
+    align-items: center;
+
+}.success-card{
+    display: grid;
+}.success-card p{
+    color: var(--Dark-Slate-Grey);
+    font-size: 12px;
+    font-weight: 300;
+    font-family: MyFont;
+    margin: 1em 0;
+}.success-card button{
+    font-size: medium;
+    font-weight: 200;
+}.success-card strong{
+    font-size: 13px;
+}
+
+
+
+@media only screen and (max-width: 700px){
+
+
+    
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100vh;
+        width: 300px;
+        border-radius: 0%;
+        padding: 0em 1em 1em 1em ;
+
+    }.card-left{
+        margin: 1em 0;
+        padding: 0;
+        width: auto;
+    }
+    h1{
+        font-size: 2em;
+        font-family: MyFont;
+    }
+    .card-right {
+        width: 113%;
+        content: url(/assets/images/illustration-sign-up-mobile.svg);
+        position: relative;
+        margin: 0;
+        padding: 0;
+        bottom: 0%;
+    }
+    li{
+        margin: .5em;
+        line-height: 1.5em;
+        display: flex;
+        align-items: self-start;
+        
+    }
+    li embed{
+        height: 1.3em;
+    }
+    button{
+        font-family: MyFont;
+        font-size: 12px;
+        font-weight: bold;
+    }section{
+        opacity: 0;
+        pointer-events: none;
+        height: 100vh;
+        border-radius: 0;
+        width: 300px;
+        padding: 1.2em;
+    }
+    section embed{
+        width: 3em;
+    }section h1{
+        font-family: MyFont;
+        font-weight: 800;
+        font-size: 2.5em;
+        letter-spacing: 0;
+    }
+    section button{
+        width: 100%;
+        position: relative;
+        top: 6.5em;
+        height: 2.5em;
+    }.success-card{
+        gap: em;
+    }.success-card p{
+        font-size: 14px;
+        font-family:new ;
+        margin-bottom: 3em;
+        font:bold;
+    }
+}
